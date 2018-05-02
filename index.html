@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "votingApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voting App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <h1 class = "text">I am ...</h1>
+  <div class = "container text-center" ng-controller="myCtrl">
+    <div class = "row">
+      <div class = "col-sm-6">
+        <h2 class = "text">FAMALE</h2>
+        <i class="fa fa-female  female"></i>
+        <br>
+        <span class ="female">{{percentageF}} %</span>
+        <button type="button" class="btn btn-success" ng-click="countF()"> &#10004; Vote</button>
+      </div>
+      <div class = "col-sm-6">
+        <h2 class = "text">MALE</h2>
+        <i class="fa fa-male male"></i>
+        <br>
+        <span class ="male">{{percentageM}} %</span>
+        <button type="button" class="btn btn-success" ng-click="countM()"> &#10004; Vote</button>
+      </div>
+      <div class = "row">
+        <div class = "col-sm-12">
+          <p>{{count}} people have voted on this website</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
